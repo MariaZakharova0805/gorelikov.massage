@@ -1,0 +1,1 @@
+export const appointmentLink = 'https://www.google.kz/?hl=ru'

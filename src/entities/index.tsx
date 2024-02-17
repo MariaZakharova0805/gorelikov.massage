@@ -1,3 +1,3 @@
-import { ButtonAppointment } from "./ButtonAppointment";
+import { ButtonAppointment } from "./ButtonAppointment/ButtonAppointment";
 
 export { ButtonAppointment };

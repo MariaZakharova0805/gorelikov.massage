@@ -1,14 +1,9 @@
 import FacebookBefore from "../UI/icons/FacebookBefore";
-import InstagramAfter from "../UI/icons/InstagramAfter";
 import InstagramBefore from "../UI/icons/InstagramBefore";
-import VKAfter from "../UI/icons/VKAfter";
 import VKBefore from "../UI/icons/VKBefore";
 import { v1 as uuidv1 } from "uuid";
-import FacebookAfter from "../UI/icons/FacebookAfter";
 import WhatsAppBefore from "../UI/icons/WhatsAppBefore";
-import WhatsAppAfter from "../UI/icons/WhatsAppAfter";
 import TelegramBefore from "../UI/icons/TelegramBefore";
-import TelegramAfter from "../UI/icons/TelegramAfter";
 import { InstagramFooter } from "UI/icons/InstagramFooter";
 import VKFooter from "../UI/icons/VKFooter";
 import FacebookFooter from "../UI/icons/FacebookFooter";
@@ -43,9 +38,8 @@ export const socialLinks = [
     id: uuidv1(),
     header: true,
     footer: true,
-    link: `https://www.instagram.com/${baseName}/`,
-    iconBefore: <InstagramBefore />,
-    iconAfter: <InstagramAfter />,
+    link: "https://www.instagram.com/massage.gorelikov",
+    icon: <InstagramBefore />,
     iconFooter: <InstagramFooter />,
     name: `Instagram.com/${baseName}`,
   },
@@ -54,8 +48,7 @@ export const socialLinks = [
     header: true,
     footer: true,
     link: "https://vk.com/aleksandr49gorelikov",
-    iconBefore: <VKBefore />,
-    iconAfter: <VKAfter />,
+    icon: <VKBefore />,
     iconFooter: <VKFooter />,
     name: "Vk.com/aleksandr49gorelikov",
   },
@@ -63,9 +56,8 @@ export const socialLinks = [
     id: uuidv1(),
     header: true,
     footer: true,
-    link: `https://www.facebook.com/${baseName}`,
-    iconBefore: <FacebookBefore />,
-    iconAfter: <FacebookAfter />,
+    link: "https://www.facebook.com/massage.gorelikov",
+    icon: <FacebookBefore />,
     iconFooter: <FacebookFooter />,
     name: `Facebook.com/${baseName}`,
   },
@@ -73,9 +65,8 @@ export const socialLinks = [
     id: uuidv1(),
     header: true,
     footer: true,
-    link: phoneNumber,
-    iconBefore: <WhatsAppBefore />,
-    iconAfter: <WhatsAppAfter />,
+    link: "https://wa.me/79959197749",
+    icon: <WhatsAppBefore />,
     iconFooter: <WhatsAppFooter />,
     name: `WhatsApp ${phoneNumber}`,
   },
@@ -83,9 +74,8 @@ export const socialLinks = [
     id: uuidv1(),
     header: true,
     footer: true,
-    link: `@${baseName}`,
-    iconBefore: <TelegramBefore />,
-    iconAfter: <TelegramAfter />,
+    link: "https://t.me/+79959197749",
+    icon: <TelegramBefore />,
     iconFooter: <TelegramFooter />,
     name: `@${baseName}`,
   },

@@ -1,3 +1,5 @@
+@import "./scss/colors.scss";
+
 @font-face {
   font-family: "Gilroy-Medium";
   src: url("./scss/fonts/gilroy-medium.eot"); /* IE 9 Compatibility Mode */
@@ -20,4 +22,7 @@ body {
   width: 100%;
   padding: 0;
   margin: 0;
+}
+a {
+  text-decoration: none;
 }

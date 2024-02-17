@@ -1,12 +1,15 @@
 import React from "react";
 import "./App.css";
 import { MainPage } from "../pages/Main";
+import { ConfigProviderApp } from "./ConfigProvider";
 
 function App() {
   return (
-    <div className="App">
-      <MainPage />
-    </div>
+    <ConfigProviderApp>
+      <div className="App">
+        <MainPage />
+      </div>
+    </ConfigProviderApp>
   );
 }
 

@@ -1,0 +1,7 @@
+.icon {
+  cursor: pointer;
+  border-radius: 26%;
+}
+.icon:hover {
+  background-color: black;
+}

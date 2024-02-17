@@ -1,0 +1,33 @@
+@import './colors.scss';
+
+@font-face {
+    font-family: "Gilroy-Medium";
+    font-style: normal;
+    font-weight: 4 00;
+    src: url("./fonts/Gilroy-Medium.ttf");
+    src: local(""),
+        url("./fonts/Gilroy-Medium.ttf") format("truetype"),
+}
+
+
+@mixin menu-text {
+    color: $white;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-family: 'Gilroy-Medium', Arial, sans-serif;
+}
+
+@mixin sectionTitle {
+    color: $black;
+    font-family: 'Gilroy-Medium', Arial, sans-serif;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+@mixin desc-text {
+    color: $black;
+    font-family: 'Gilroy-Medium', Arial, sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    font-style: italic;
+}

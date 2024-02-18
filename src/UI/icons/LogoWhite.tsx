@@ -1,6 +1,6 @@
-import React, { SVGProps } from "react";
+import React from "react";
 
-export const LogoWhite = (props: SVGProps<SVGSVGElement>) => (
+export const LogoWhite = () => (
 <svg width="59.000000" height="59.000000" viewBox="0 0 59 59" fill="none" xmlns="http://www.w3.org/2000/svg">
 	<defs/>
 	<path id="Vector" d="M57.5 29.5C57.5 44.9648 44.9648 57.5 29.5 57.5C14.0352 57.5 1.5 44.9648 1.5 29.5C1.5 14.0352 14.0371 1.5 29.5 1.5C44.9648 1.5 57.5 14.0352 57.5 29.5Z" stroke="#FFFFFF" strokeOpacity="1.000000" strokeWidth="3.000000"/>

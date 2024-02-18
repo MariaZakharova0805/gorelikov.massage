@@ -1,11 +1,10 @@
-import { FC } from "react";
 import { menuItems } from "shared/constants";
 import { BurgerMenuButton } from "./BurgerMenuButton";
 import { Button, Dropdown, MenuProps, Typography } from "antd";
-import { Menu } from "entities/Menu/Menu";
-import { MenuModes } from "shared/types";
+import { MenuModes } from "../../shared/types";
 import styles from "./BurgerMenu.module.scss";
 import { PhoneButton } from "entities/PhoneButton/PhoneButton";
+import { SocialLinks } from "entities/SocialLinks/SocialLinks";
 
 const { Text } = Typography;
 export const BurgerMenu = () => {
@@ -32,16 +31,16 @@ export const BurgerMenu = () => {
     },
     {
       key: "phone",
-      label: <PhoneButton />,
+      label: <PhoneButton mode={MenuModes.Vertical} />,
     },
     {
       key: "socialLinks",
-      label: <div>socialLinks</div>,
+      label: <SocialLinks mode={MenuModes.Vertical} />,
     },
   ];
 
   return (
-    <Dropdown menu={{ items }} placement="bottom">
+    <Dropdown menu={{ items }} placement="bottom" destroyPopupOnHide>
       <Button type="text">
         <BurgerMenuButton />
       </Button>

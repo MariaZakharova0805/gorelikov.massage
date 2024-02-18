@@ -1,0 +1,36 @@
+@import '../../app/scss/colors.scss';
+@import '../../app/scss/mixins.scss';
+
+.button,
+.buttonBurger {
+  border-radius: 60px;
+  cursor: pointer;
+  height: 41px;
+  width: 200px;
+  background-color: rgba(28, 28, 28, 0);
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 16px;
+  transition: 0.4s;
+  margin-top: -1px;
+  svg {
+    transform: rotate(90deg);
+  }
+
+  &:hover {
+    color: $blue;
+    background-color: $black;
+    border: 1px solid $black;
+    svg {
+      path {
+        fill: $blue;
+      }
+    }
+  }
+
+}
+
+.button {
+  color: $white;
+  border: 1px solid $white;
+}

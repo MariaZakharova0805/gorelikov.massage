@@ -23,6 +23,24 @@
     width: 40px;
 }
 
-.menuItems {
-    @include menu-text;
+.menu {
+    display: none;
+
+    @media (min-width: 1200px) {
+        display: block;
+    }
+}
+
+.socialLinks {
+    display: none;
+    @media (min-width: 768px) {
+        display: block;
+    }
+
+}
+
+.burgerMenu {
+    @media (min-width: 768px) {
+        display: none;
+    }
 }

@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { FC, useState } from "react";
 import styles from "./iconStyles.module.css";
+import { IconProps } from "./types";
 
-export const TelegramBefore = () => {
-  const iconColor = "#FFFFFF";
-  const iconColorHover = "#0095DA";
+export const TelegramIcon: FC<IconProps> = ({
+  iconColor = "#FFFFFF",
+  iconColorHover = "#0095DA",
+}) => {
   const [color, setColor] = useState(iconColor);
   return (
     <svg
@@ -45,18 +47,8 @@ export const TelegramBefore = () => {
           fillRule="nonzero"
         />
       </g>
-      <rect
-        id="Property 1=Default"
-        rx="10.000000"
-        width="39.000000"
-        height="39.000000"
-        transform="translate(0.500000 0.500000)"
-        stroke={color}
-        strokeOpacity="1.000000"
-        strokeWidth="1.000000"
-      />
     </svg>
   );
 };
 
-export default React.memo(TelegramBefore);
+export default React.memo(TelegramIcon);

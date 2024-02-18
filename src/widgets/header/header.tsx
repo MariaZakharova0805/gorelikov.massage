@@ -1,6 +1,5 @@
-import React, { useState } from "react";
 import styles from "./styles.module.scss";
-import { Col, Row } from "antd";
+import { Col, Row, Space } from "antd";
 import logo from "./logo.svg";
 import { Menu } from "entities/Menu/Menu";
 import { MenuModes } from "shared/types";
@@ -14,24 +13,22 @@ export const Header = () => {
       <Col>
         <img src={logo} alt="logo" className={styles.logo} />
       </Col>
-
-      {window.innerWidth > 786 && (
-        <Col>
-          <Menu mode={MenuModes.Horizontal} />
-        </Col>
-      )}
-
-      <Col>
-        <PhoneButton />
+      <Col className={styles.menu}>
+        <Menu mode={MenuModes.Horizontal} />
       </Col>
-
-      {window.innerWidth > 1000 && <SocialLinks />}
-
-      {window.innerWidth < 768 && (
-        <Col>
-          <BurgerMenu />
-        </Col>
-      )}
+      <Col>
+        <Space>
+          <Col>
+            <PhoneButton mode={MenuModes.Horizontal}/>
+          </Col>
+          <Col className={styles.socialLinks}>
+            <SocialLinks mode={MenuModes.Horizontal}/>
+          </Col>
+          <Col className={styles.burgerMenu}>
+            <BurgerMenu />
+          </Col>
+        </Space>
+      </Col>
     </Row>
   );
 };

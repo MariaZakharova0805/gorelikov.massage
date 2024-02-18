@@ -1,7 +1,7 @@
 import React from "react";
 import { appointmentLink } from "../constants";
 import { Typography } from "antd";
-import styles from "./ButtonAppointment.module.css";
+import styles from "./ButtonAppointment.module.scss";
 import img from "./logo.png";
 const { Text } = Typography;
 

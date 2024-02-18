@@ -1,10 +1,12 @@
+@import "../../app/scss/colors.scss";
+
 .button {
   padding: 16px 32px 16px 32px;
   width: 172px;
   height: 56px;
   border-radius: 60px;
-  background-color: var(--black);
-  border: 1px solid var(--black);
+  background-color: $black;
+  border: 1px solid $black;
   cursor: pointer;
   transition: 0.8s;
   display: flex;
@@ -14,20 +16,20 @@
   gap: 13px;
 }
 .button:hover {
-  background-color: var(--white);
+  background-color: $white;
   width: 205px;
 }
 .text {
   font-size: 16px;
   font-weight: 400px;
   text-transform: uppercase;
-  color: var(--white);
+  color: $white;
   transition: 0.8s;
   white-space: nowrap;
 }
 
 .button:hover .text {
-  color: var(--black);
+  color: $black;
 }
 .img {
   width: 40px;

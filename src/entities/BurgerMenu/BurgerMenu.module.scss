@@ -1,0 +1,12 @@
+@import '../../app/scss/colors.scss';
+@import '../../app/scss/mixins.scss';
+
+.burger {
+  cursor: pointer;
+}
+
+.menuItemText {
+  @include menu-text;
+  color: $black;
+  padding: 0;
+}

@@ -1,26 +1,37 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./styles.module.scss";
-import { menuItems } from "shared/constants";
 import { Col, Row } from "antd";
-import LogoWhite from "UI/icons/LogoWhite";
-import { PhoneLink } from "./components/phone-link";
+import logo from "./logo.svg";
+import { Menu } from "entities/Menu/Menu";
+import { MenuModes } from "shared/types";
+import { SocialLinks } from "entities/SocialLinks/SocialLinks";
+import { BurgerMenu } from "entities/BurgerMenu/BurgerMenu";
+import { PhoneButton } from "entities/PhoneButton/PhoneButton";
 
 export const Header = () => {
   return (
-    <Row justify="space-between" className={styles.header}>
+    <Row align="middle" className={styles.header} justify="space-between">
       <Col>
-        {/* <LogoWhite /> */}
+        <img src={logo} alt="logo" className={styles.logo} />
       </Col>
+
+      {window.innerWidth > 786 && (
+        <Col>
+          <Menu mode={MenuModes.Horizontal} />
+        </Col>
+      )}
+
       <Col>
-        {/* <PhoneLink /> */}
+        <PhoneButton />
       </Col>
-      <Col>
-        {/* <Row justify="space-between">
-          {menuItems.map((item) => (
-            <div key={item.id}>{item.name}</div>
-          ))}
-        </Row> */}
-      </Col>
+
+      {window.innerWidth > 1000 && <SocialLinks />}
+
+      {window.innerWidth < 768 && (
+        <Col>
+          <BurgerMenu />
+        </Col>
+      )}
     </Row>
   );
 };

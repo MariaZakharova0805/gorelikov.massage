@@ -1,0 +1,16 @@
+@import '../../app/scss/mixins.scss';
+@import '../../app/scss/colors.scss';
+
+.menuItemsHorizontal {
+    @include menu-text;
+
+    &:hover {
+        cursor: pointer;
+        background-color: $black;
+    }
+}
+
+.menuItemsVertical {
+    @include menu-text;
+    color: $black;
+}

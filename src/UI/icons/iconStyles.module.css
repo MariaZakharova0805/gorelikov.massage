@@ -1,12 +1,18 @@
-.icon {
+.icon,
+.iconBurger {
   cursor: pointer;
   border-radius: 100%;
   border: none;
   margin-top: 1px;
-  border: 1px solid white;
   transition: 0.4s;
+  &:hover {
+    background-color: black;
+    border: 1px solid black;
+  }
 }
-.icon:hover {
-  background-color: black;
+.icon {
+  border: 1px solid white;
+}
+.iconBurger {
   border: 1px solid black;
 }

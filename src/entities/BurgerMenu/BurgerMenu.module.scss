@@ -1,5 +1,5 @@
-@import '../../app/scss/colors.scss';
-@import '../../app/scss/mixins.scss';
+@import "../../app/scss/colors.scss";
+@import "../../app/scss/mixins.scss";
 
 .burger {
   cursor: pointer;
@@ -9,4 +9,26 @@
   @include menu-text;
   color: $black;
   padding: 0;
+}
+.menu {
+  display: flex;
+  flex-direction: column;
+  background-color: red;
+  padding: 0;
+  :global {
+    .ant-dropdown-menu.ant-dropdown-menu-root {
+      background-color: red !important;
+    }
+    .ant-dropdown-menu-root {
+      background-color: red !important;
+    }
+  }
+}
+
+.menuItemText {
+  padding: 5px 8px;
+}
+.menuItemText:hover {
+  background-color: $black;
+  color: $ivory;
 }

@@ -1,4 +1,3 @@
-import { FC } from "react";
 import styles from "./BurgerMenu.module.scss";
 
 export const BurgerMenuButton = () => {

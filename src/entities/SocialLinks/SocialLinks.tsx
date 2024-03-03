@@ -25,19 +25,19 @@ export const SocialLinks: FC<SocialLinksProps> = ({ mode }) => {
       ) : (
         <Space size={10}>
           <a href={socialLinks[0].link} target="_blank" rel="noreferrer">
-            <InstagramIcon iconColor="black" />
+            <InstagramIcon iconColor="black" mode={mode}/>
           </a>
           <a href={socialLinks[1].link} target="_blank" rel="noreferrer">
-            <VKIcon iconColor="black" />
+            <VKIcon iconColor="black" mode={mode}/>
           </a>
           <a href={socialLinks[2].link} target="_blank" rel="noreferrer">
-            <FacebookIcon iconColor="black" />
+            <FacebookIcon iconColor="black" mode={mode}/>
           </a>
           <a href={socialLinks[3].link} target="_blank" rel="noreferrer">
-            <WhatsAppIcon iconColor="black" />
+            <WhatsAppIcon iconColor="black" mode={mode}/>
           </a>
           <a href={socialLinks[4].link} target="_blank" rel="noreferrer">
-            <TelegramIcon iconColor="black" />
+            <TelegramIcon iconColor="black" mode={mode}/>
           </a>
         </Space>
       )}

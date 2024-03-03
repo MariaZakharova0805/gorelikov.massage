@@ -1,0 +1,75 @@
+@import "../../app/scss/colors.scss";
+
+.block {
+  background-image: url("./components/topImg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 192px 20px 134px;
+  text-align: center;
+
+  @media (min-width: 768px) {
+    padding: 256px 20px 174px;
+  }
+  @media (min-width: 1200px) {
+    padding: 434px 20px 149px;
+  }
+}
+.smallHeader {
+  width: 310px;
+  height: 56px;
+  margin-bottom: 96px;
+  @media (min-width: 768px) {
+    width: 621px;
+    height: 100px;
+    margin-bottom: 64px;
+  }
+
+  @media (min-width: 1200px) {
+    display: none;
+  }
+}
+.bigHeader {
+  display: none;
+
+  @media (min-width: 1200px) {
+    display: block;
+    height: 40px;
+    margin: 0 auto;
+    margin-bottom: 120px;
+  }
+}
+
+.massageStudio,
+.name {
+  text-transform: uppercase;
+  color: $white;
+  font-weight: 300;
+  letter-spacing: 0.2rem;
+}
+
+.massageStudio {
+  font-size: 20px;
+  margin-bottom: 16px;
+
+  @media (min-width: 768px) {
+    font-size: 36px;
+    margin-bottom: 8px;
+  }
+  @media (min-width: 1200px) {
+    font-size: 40x;
+  }
+}
+
+.name {
+  font-size: 40px;
+  margin-bottom: 18px;
+  @media (min-width: 768px) {
+    font-size: 46px;
+    margin-bottom: 40px;
+  }
+  @media (min-width: 1200px) {
+    font-size: 52px;
+    margin-bottom: 48px;
+  }
+}

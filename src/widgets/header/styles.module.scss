@@ -1,46 +1,54 @@
-@import '../../app/scss/colors.scss';
-@import '../../app/scss/mixins.scss';
+@import "../../app/scss/colors.scss";
+@import "../../app/scss/mixins.scss";
 
 .header {
-    background: rgb(36, 32, 28);
-    background: linear-gradient(180deg, rgba(36, 32, 28, 1) 0%, rgba(44, 41, 40, 1) 53%, rgba(229, 221, 208, 1) 100%);
-    width: 100vw;
-    padding: 16px 20px;
-    overflow: hidden;
+  background: rgb(36, 32, 28);
+  background: linear-gradient(
+    180deg,
+    rgba(36, 32, 28, 1) 0%,
+    rgba(44, 41, 40, 0) 100%,
+    rgba(229, 221, 208, 1) 100%
+  );
+  width: 100%;
+  padding: 16px 20px;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 
-    @media (min-width: 768px) {
-        padding: 16px 60px;
-    }
+  @media (min-width: 768px) {
+    padding: 16px 60px;
+  }
 
-    @media (min-width: 1200px) {
-        padding: 16px 100px;
-    }
+  @media (min-width: 1200px) {
+    padding: 16px 100px;
+  }
 }
 
-
 .logo {
-    height: 40px;
-    width: 40px;
+  height: 40px;
+  width: 40px;
 }
 
 .menu {
-    display: none;
+  display: none;
 
-    @media (min-width: 1200px) {
-        display: block;
-    }
+  @media (min-width: 1200px) {
+    display: block;
+  }
 }
 
 .socialLinks {
-    display: none;
-    @media (min-width: 768px) {
-        display: block;
-    }
-
+  display: none;
+  @media (min-width: 768px) {
+    display: block;
+  }
 }
 
 .burgerMenu {
-    @media (min-width: 768px) {
-        display: none;
-    }
+  @media (min-width: 768px) {
+    display: none;
+  }
 }

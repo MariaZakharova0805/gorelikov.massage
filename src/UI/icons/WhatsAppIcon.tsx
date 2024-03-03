@@ -1,10 +1,12 @@
 import React, { FC, useState } from "react";
 import styles from "./iconStyles.module.css";
 import { IconProps } from "./types";
+import { MenuModes } from "shared/types";
 
 export const WhatsAppIcon: FC<IconProps> = ({
   iconColor = "#FFFFFF",
   iconColorHover = "#0095DA",
+  mode = MenuModes.Horizontal,
 }) => {
   const [color, setColor] = useState(iconColor);
 
@@ -17,7 +19,9 @@ export const WhatsAppIcon: FC<IconProps> = ({
       xmlns="http://www.w3.org/2000/svg"
       onMouseEnter={() => setColor(iconColorHover)}
       onMouseLeave={() => setColor(iconColor)}
-      className={styles.icon}
+      className={
+        mode === MenuModes.Horizontal ? styles.icon : styles.iconBurger
+      }
     >
       <defs>
         <clipPath id="clip484_1103">

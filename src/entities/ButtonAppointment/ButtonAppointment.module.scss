@@ -1,11 +1,32 @@
 @import "../../app/scss/colors.scss";
 
+.img {
+  width: 40px;
+  height: 40px;
+  display: none;
+  transition: 0.8s;
+}
+.buttonTopBlock {
+  margin: 0 auto;
+  background-color: $white;
+  .text {
+    color: $black;
+  }
+}
+
 .button {
+  background-color: $black;
+  .text {
+    color: $white;
+  }
+}
+
+.button,
+.buttonTopBlock {
   padding: 16px 32px 16px 32px;
   width: 172px;
   height: 56px;
   border-radius: 60px;
-  background-color: $black;
   border: 1px solid $black;
   cursor: pointer;
   transition: 0.8s;
@@ -14,29 +35,23 @@
   align-items: center;
   justify-content: space-between;
   gap: 13px;
-}
-.button:hover {
-  background-color: $white;
-  width: 205px;
-}
-.text {
-  font-size: 16px;
-  font-weight: 400px;
-  text-transform: uppercase;
-  color: $white;
-  transition: 0.8s;
-  white-space: nowrap;
-}
 
-.button:hover .text {
-  color: $black;
-}
-.img {
-  width: 40px;
-  height: 40px;
-  display: none;
-  transition: 0.8s;
-}
-.button:hover .img {
-  display: block;
+  .text {
+    font-size: 16px;
+    font-weight: 400px;
+    text-transform: uppercase;
+    transition: 0.8s;
+    white-space: nowrap;
+  }
+
+  &:hover {
+    background-color: $white;
+    width: 205px;
+    .text {
+      color: $black;
+    }
+    .img {
+      display: block;
+    }
+  }
 }

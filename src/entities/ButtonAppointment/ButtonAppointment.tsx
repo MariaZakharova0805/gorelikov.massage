@@ -1,15 +1,27 @@
-import React from "react";
-import { appointmentLink } from "../constants";
+import { FC } from "react";
 import { Typography } from "antd";
-import styles from "./ButtonAppointment.module.scss";
 import img from "./logo.png";
+import { makeAppointment, appointmentLink } from "shared/constants";
+import { ButtonMode } from "./modeType";
+
+import styles from "./ButtonAppointment.module.scss";
+
 const { Text } = Typography;
 
-export const ButtonAppointment = () => {
+type ButtonAppointmentType = {
+  mode?: ButtonMode;
+};
+export const ButtonAppointment: FC<ButtonAppointmentType> = ({
+  mode = ButtonMode.Black,
+}) => {
   return (
     <a href={appointmentLink} target="_blank" rel="noreferrer">
-      <button className={styles.button}>
-        <Text className={styles.text}>Записаться</Text>
+      <button
+        className={
+          mode === ButtonMode.Black ? styles.button : styles.buttonTopBlock
+        }
+      >
+        <Text className={styles.text}>{makeAppointment}</Text>
         <img className={styles.img} src={img} alt="логотип" />
       </button>
     </a>

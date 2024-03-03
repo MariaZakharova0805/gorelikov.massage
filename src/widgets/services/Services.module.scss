@@ -1,10 +1,65 @@
 @import "../../app/scss/mixins.scss";
+@import "../../app/scss/colors.scss";
 
 .header {
+  margin-bottom: 32px;
   @include sectionTitle;
-  padding: 80px 0 32px;
 
   @media (min-width: 1200px) {
-    padding: 120px 72px;
+    margin-bottom: 72px;
   }
+}
+
+// MassageList
+.massageList {
+  border: 2px solid $brownMedium;
+  padding: 16px;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.massageList_item {
+  cursor: pointer;
+  padding: 5px 0;
+}
+.massageList_item_text_selected,
+.massageList_item_text {
+  padding: 4px 8px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.massageList_item_text {
+  margin-left: 20px;
+}
+.massageList_item_text_selected {
+  background-color: $black;
+  color: $white;
+  border-radius: 12px;
+}
+.massageList_name {
+}
+
+// Descritions
+
+.descriptions {
+  background-color: $brownMedium;
+  padding: 16px;
+  border-radius: 30px;
+  height: 100%;
+}
+.descriptions_title {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+.descriptions_name {
+  font-size: 14px;
+  font-weight: 700;
+}
+.massageList_time {
+  text-align: right;
 }

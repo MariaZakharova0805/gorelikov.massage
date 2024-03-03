@@ -1,11 +1,12 @@
-$ivory: #F4EFE8;
-$peach: #E5DDD0;
-$brown: #6F6257;
-$brownLight: #A18D7C;
-$black: #1A1917;
-$white: #FFFFFF;
-$blue: #0095DA;
-$grey: #CCCCCC;
+$ivory: #f4efe8;
+$peach: #e5ddd0;
+$brown: #6f6257;
+$brownLight: #a18d7c;
+$black: #1a1917;
+$white: #ffffff;
+$blue: #0095da;
+$grey: #cccccc;
+$brownMedium: #e6ddd0;
 
 :export {
   ivory: $ivory;
@@ -16,4 +17,5 @@ $grey: #CCCCCC;
   white: $white;
   blue: $blue;
   grey: $grey;
+  brownMedium: $brownMedium;
 }

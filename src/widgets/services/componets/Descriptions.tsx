@@ -1,11 +1,8 @@
-import { FC } from "react";
-
 import styles from "../Services.module.scss";
+import { useServicesContextContext } from "../ServicesCotext";
 
-type DescritionsType = {
-  massageDetailed: any;
-};
+export const Descriptions = () => {
+  const { massageDetailed, setMassageDetailed } = useServicesContextContext();
 
-export const Descriptions: FC<DescritionsType> = ({ massageDetailed }) => {
   return <div className={styles.descriptions}>{massageDetailed.name}</div>;
 };

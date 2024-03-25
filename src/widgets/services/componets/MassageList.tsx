@@ -15,7 +15,7 @@ export const MassageList = () => {
       label: "Общий массаж",
       showArrow: false,
       children: massageChildren.map((child) => (
-        <MassageListItem item={child} />
+        <MassageListItem item={child} key={child.id} />
       )),
     },
     {
@@ -23,20 +23,24 @@ export const MassageList = () => {
       label: "Антицеллюлитный массаж",
       showArrow: false,
       children: cellulitechildren.map((child) => (
-        <MassageListItem item={child} />
+        <MassageListItem item={child} key={child.id} />
       )),
     },
     {
       key: "honey",
       label: "Медовый массаж",
       showArrow: false,
-      children: honeyChildren.map((child) => <MassageListItem item={child} />),
+      children: honeyChildren.map((child) => (
+        <MassageListItem item={child} key={child.id} />
+      )),
     },
     {
       key: "jars",
       label: "Баночный массаж",
       showArrow: false,
-      children: jarsChildren.map((child) => <MassageListItem item={child} />),
+      children: jarsChildren.map((child) => (
+        <MassageListItem item={child} key={child.id} />
+      )),
     },
   ];
 

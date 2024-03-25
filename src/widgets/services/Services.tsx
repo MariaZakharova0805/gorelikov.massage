@@ -30,7 +30,7 @@ export const Services = () => {
             <MassageList />
           </Col>
           <Col {...layoutCol}>
-            <Descriptions massageDetailed={massageDetailed} />
+            <Descriptions />
           </Col>
         </Row>
       </Section>

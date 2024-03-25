@@ -7,6 +7,8 @@ import TelegramIcon from "../UI/icons/TelegramIcon";
 
 export const appointmentLink = "https://www.google.kz/?hl=ru";
 export const phoneNumber = "+7 995 919 77 49";
+export const phoneNumberLink = "tel:79959197749";
+
 export const baseName = "massage.gorelikov";
 
 export const massageStudio = "Студия массажа";

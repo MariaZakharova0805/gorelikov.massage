@@ -1,23 +1,53 @@
-import { FC } from "react";
-import { massageTypes } from "../constants";
-import logo from "./Logo.svg";
+import { MassageListItem } from "./MassageListItem";
+import { Collapse } from "antd";
 import styles from "../Services.module.scss";
-import { Col, Collapse, CollapseProps, Row, Space, Typography } from "antd";
-import { MassageListTypes } from "../types";
-import { MassageListItems } from "./MassageListItems";
+import {
+  cellulitechildren,
+  honeyChildren,
+  jarsChildren,
+  massageChildren,
+} from "../constants";
 
-type MassageListType = {
-  massageType: any;
-  setMassageType: (type: any) => void;
-};
+export const MassageList = () => {
+  const massageTypes = [
+    {
+      key: "massage",
+      label: "Общий массаж",
+      showArrow: false,
+      children: massageChildren.map((child) => (
+        <MassageListItem item={child} />
+      )),
+    },
+    {
+      key: "cellulite",
+      label: "Антицеллюлитный массаж",
+      showArrow: false,
+      children: cellulitechildren.map((child) => (
+        <MassageListItem item={child} />
+      )),
+    },
+    {
+      key: "honey",
+      label: "Медовый массаж",
+      showArrow: false,
+      children: honeyChildren.map((child) => <MassageListItem item={child} />),
+    },
+    {
+      key: "jars",
+      label: "Баночный массаж",
+      showArrow: false,
+      children: jarsChildren.map((child) => <MassageListItem item={child} />),
+    },
+  ];
 
-export const MassageList: FC<MassageListType> = ({
-  massageType,
-  setMassageType,
-}) => {
   return (
     <div className={styles.massageList}>
-      <Collapse defaultActiveKey={"massage"} ghost items={massageTypes} />
+      <Collapse
+        defaultActiveKey={"massage"}
+        accordion
+        ghost
+        items={massageTypes}
+      />
     </div>
   );
 };

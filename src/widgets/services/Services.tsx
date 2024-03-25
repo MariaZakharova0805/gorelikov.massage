@@ -4,29 +4,36 @@ import { servesiesTitle } from "shared/constants";
 
 import styles from "./Services.module.scss";
 import { MassageList } from "./componets/MassageList";
-import { useState } from "react";
-import { layoutCol, massageTypes } from "./constants";
+import { useMemo, useState } from "react";
+import { layoutCol, massageChildren } from "./constants";
+
 import { Descriptions } from "./componets/Descriptions";
+import { ServicesContext } from "./ServicesCotext";
 
 export const Services = () => {
-  const [massageType, setMassageType] = useState(massageTypes[0]);
-  const [massageDetailed, setMassageDetailed] = useState(massageTypes[0].types[0]);
+  const [massageDetailed, setMassageDetailed] = useState(massageChildren[0]);
+
+  const contextValue = useMemo(
+    () => ({
+      massageDetailed,
+      setMassageDetailed,
+    }),
+    [massageDetailed, setMassageDetailed]
+  );
 
   return (
-    <Section>
-      <Typography className={styles.header}>{servesiesTitle}</Typography>
-      <Row gutter={[24, 24]}>
-        <Col {...layoutCol}>
-          <MassageList
-            massageType={massageType}
-            setMassageType={setMassageType}
-          />
-        </Col>
-
-        <Col {...layoutCol}>
-          <Descriptions massageDetailed={massageDetailed} />
-        </Col>
-      </Row>
-    </Section>
+    <ServicesContext.Provider value={contextValue}>
+      <Section>
+        <Typography className={styles.header}>{servesiesTitle}</Typography>
+        <Row gutter={[24, 24]}>
+          <Col {...layoutCol}>
+            <MassageList />
+          </Col>
+          <Col {...layoutCol}>
+            <Descriptions massageDetailed={massageDetailed} />
+          </Col>
+        </Row>
+      </Section>
+    </ServicesContext.Provider>
   );
 };
